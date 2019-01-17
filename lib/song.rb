@@ -15,6 +15,10 @@ def initialize(name, artist, genre)
 if @@artists.include?(name) == false
   @@artists.push(name)
   @@artist_count[name] = 1
+else
+  @@artist_count[name] += 1
+end
+
 
 
 end
