@@ -5,6 +5,8 @@ class Song
 @@genre_count ={}
 @@artist_count = {}
 
+
+
 attr_accessor :name,:artist,:genre
 
 def initialize(name, artist, genre)
@@ -12,8 +14,9 @@ def initialize(name, artist, genre)
 @artist = artist
 @genre = genre
 @@count += 1
+@@artists.push(artist)
+@@genres.push(genre)
 if @@artists.include?(artist) == false
-  @@artists.push(artist)
   @@artist_count[artist] = 1
 else
   @@artist_count[artist] += 1
